@@ -14,6 +14,7 @@ export default function App() {
 	useEffect(() => {
 		const initialize = async () => {
 			const sdk = await SDK.init();
+      console.log('sdk', sdk);
 		};
 		initialize();
 	}, []);
