@@ -6,9 +6,8 @@ function App() {
 
 	useEffect(() => {
 		const initialize = async () => {
-
 			const sdk = await SDK.init();
-      console.log(SDK);
+      console.log(SDK,sdk);
 		};
 		initialize();
 	}, []);
