@@ -13,8 +13,9 @@ export default function App() {
 
 	useEffect(() => {
 		const initialize = async () => {
-			const sdk = await SDK.init();
-      console.log('sdk', sdk);
+			const dcApp = await SDK.init();
+       dcApp.frame.setHeight(800);
+      console.log('dcApp', dcApp);
 		};
 		initialize();
 	}, []);
