@@ -7,7 +7,9 @@ import Form from './Components/Form';
 export default function App() {
   const [gifSrc, setGifSrc] = useState({});
 
-  const apiKey = process.env.REACT_APP_API_KEY;
+  // const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = 'W9ThL38OlmMnIif0P13v036495Y4OMVA';
+  console.log(apiKey + 'apiKey');
 
 	useEffect(() => {
 		const initialize = async () => {
