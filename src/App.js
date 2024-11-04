@@ -9,8 +9,6 @@ export default function App() {
 
   const apiKey = process.env.REACT_APP_API_KEY;
 
-  const key = 'W9ThL38OlmMnIif0P13v036495Y4OMVA';
-
 	useEffect(() => {
 		const initialize = async () => {
 			const sdk = await SDK.init();
@@ -19,7 +17,7 @@ export default function App() {
 	}, []);
 
   const makeApiCall = async () => {
-    const gifSrc = `https://api.giphy.com/v1/gifs/random?api_key=${key}`;
+    const gifSrc = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`;
     try {
       const res = await fetch(gifSrc);
       const json = await res.json(); 
@@ -36,7 +34,7 @@ export default function App() {
 
   const handleSubmit = async (val) => {
     if(val) {
-      const gifSrc = `https://api.giphy.com/v1/gifs/search?api_key=${key}&q=${val}&limit=1`;
+      const gifSrc = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${val}&limit=1`;
       const res = await fetch(gifSrc);
       const json = await res.json();
       console.log('handleSumbit', json.data[0].images.downsized_large.url );
